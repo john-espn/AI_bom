@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#19382f">
+  <title>{% block title %}AI-BOM{% endblock %} · 铅笔制造</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  {% if user %}
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="AI-BOM 工作台首页">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><b>AI-BOM</b><small>铅笔制造智能体</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="主导航" data-nav>
+      <a href="/" class="{% if request.url.path == '/' %}active{% endif %}">工作台</a>
+      {% if can(user.role, 'upload') %}<a href="/orders/upload" class="{% if request.url.path.startswith('/orders') %}active{% endif %}">订单解析</a>{% endif %}
+      {% if can(user.role, 'batch') %}<a href="/batch" class="{% if request.url.path.startswith('/batch') %}active{% endif %}">批量派生</a>{% endif %}
+      {% if can(user.role, 'view') %}<a href="/records" class="{% if request.url.path.startswith('/records') or request.url.path.startswith('/drafts') %}active{% endif %}">生成记录</a>{% endif %}
+      {% if can(user.role, 'knowledge_view') %}<a href="/knowledge" class="{% if request.url.path.startswith('/knowledge') %}active{% endif %}">BOM 知识库</a>{% endif %}
+      {% if can(user.role, 'admin') %}<a href="/admin" class="{% if request.url.path.startswith('/admin') %}active{% endif %}">系统管理</a>{% endif %}
+    </nav>
+    <div class="user-menu">
+      <span class="avatar" aria-hidden="true">{{ (user.display_name or user.username or '用')[0] }}</span>
+      <span class="user-copy"><b>{{ user.display_name or user.username }}</b><small>{{ role_labels.get(user.role, user.role) }}</small></span>
+      <a class="logout" href="/logout">退出</a>
+    </div>
+  </header>
+  {% endif %}
+
+  {% if user %}<main id="main-content" class="page-shell">{% else %}<main id="main-content">{% endif %}
+    {% if flash %}
+      {% if flash is mapping %}
+      <div class="flash flash-{{ flash.get('kind', 'info') }}" role="status"><span aria-hidden="true">{% if flash.get('kind') == 'success' %}✓{% elif flash.get('kind') == 'error' %}!{% else %}i{% endif %}</span><p>{{ flash.get('message', '') }}</p><button type="button" aria-label="关闭提示" data-dismiss>×</button></div>
+      {% elif flash is string %}
+      <div class="flash flash-info" role="status"><span aria-hidden="true">i</span><p>{{ flash }}</p><button type="button" aria-label="关闭提示" data-dismiss>×</button></div>
+      {% else %}
+      {% for message in flash %}
+        {% set flash_type = message.category if message.category is defined else (message[0] if message is sequence and message is not string else 'info') %}
+        {% set flash_text = message.message if message.message is defined else (message[1] if message is sequence and message is not string else message) %}
+        <div class="flash flash-{{ flash_type }}" role="status"><span aria-hidden="true">{% if flash_type in ['success','ok'] %}✓{% elif flash_type in ['error','danger'] %}!{% else %}i{% endif %}</span><p>{{ flash_text }}</p><button type="button" aria-label="关闭提示" data-dismiss>×</button></div>
+      {% endfor %}
+      {% endif %}
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  {% if user %}
+  <footer class="site-footer"><span>AI-BOM MVP · 数据全程留痕</span><span>建议使用桌面端完成 BOM 复核</span></footer>
+  {% endif %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

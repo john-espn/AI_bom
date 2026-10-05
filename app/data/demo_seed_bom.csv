@@ -1,0 +1,19 @@
+bom_code,bom_version,source_name,source_order_no,product_family,applicable_specification,applicable_color_no,applicable_aux,line_no,level,parent_material_code,material_category,material_code,material_name,quantity,unit
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,1,1,FG-HB-HEX,base,WOOD-HEX-70,六角椴木笔杆,1,支
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,2,1,FG-HB-HEX,base,CORE-HB-20,HB石墨铅芯,1,支
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,3,1,FG-HB-HEX,color,PAINT-RED-01,红色环保漆,0.02,kg
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,4,1,FG-HB-HEX,foil,PRINT-GOLD,金色烫印辅料,1,次
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,5,1,FG-HB-HEX,eraser,ERASER-WHITE,白色橡皮头,1,个
+BOM-HB-HEX,V1,演示历史BOM,HIST-001,HB六角铅笔,7.0mm HB 六角杆,RED-01,金色烫印;白色橡皮头;12支盒彩盒,6,1,FG-HB-HEX,package,BOX-COLOR-12,12支盒彩盒,0.083,个
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,1,1,FG-HB-HEX,base,WOOD-HEX-70,六角椴木笔杆,1,支
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,2,1,FG-HB-HEX,base,CORE-HB-20,HB石墨铅芯,1,支
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,3,1,FG-HB-HEX,color,PAINT-BLUE-02,蓝色环保漆,0.03,kg
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,4,1,FG-HB-HEX,foil,PRINT-SILVER,银色烫印辅料,1,次
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,5,1,FG-HB-HEX,eraser,ERASER-WHITE,白色橡皮头,1,个
+BOM-HB-HEX,V2,演示历史BOM,HIST-002,HB六角铅笔,7.0mm HB 六角杆,BLUE-02,银色烫印;白色橡皮头;12支盒彩盒,6,1,FG-HB-HEX,package,BOX-COLOR-12,12支盒彩盒,0.084,个
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,1,1,FG-HB-HEX,base,WOOD-HEX-70,六角椴木笔杆,1,支
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,2,1,FG-HB-HEX,base,CORE-HB-20,HB石墨铅芯,1,支
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,3,1,FG-HB-HEX,color,PAINT-GREEN-03,绿色环保漆,0.02,kg
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,4,1,FG-HB-HEX,foil,PRINT-SILVER,银色烫印辅料,1,次
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,5,1,FG-HB-HEX,eraser,ERASER-WHITE,白色橡皮头,1,个
+BOM-HB-HEX,V3,演示历史BOM,HIST-003,HB六角铅笔,7.0mm HB 六角杆,GREEN-03,银色烫印;白色橡皮头;12支盒彩盒,6,1,FG-HB-HEX,package,BOX-COLOR-12,12支盒彩盒,0.085,个
